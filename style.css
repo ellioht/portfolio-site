@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Define color variables */
+:root {
+  --color-primary: #393d3f;
+  --color-secondary: #fdfdff;
+  --color-tertiary: #c6c5b9;
+  --color-accent1: #62929e;
+  --color-accent2: #546a7b;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding-top: 70px;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, var(--color-accent2), var(--color-accent2));
+}
+
+.navbar {
+  background-color: transparent !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.custom-navbar {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.navbar-nav {
+  padding-right: 20px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-primary);
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary) !important;
+  transform: translateX(0%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.navbar-nav .nav-link:hover::before {
+  transform: translateX(100%);
+}
+
+/* Remove bootstrap hover effect on links */
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: var(--color-primary) !important;
+}
+
+.navbar-brand {
+  color: var(--color-primary) !important;
+  margin-left: 20px;
+  padding: 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-brand::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary) !important;
+  transform: translateX(0%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.navbar-brand:hover::before {
+  transform: translateX(100%);
+}
+
+section {
+  background-color: var(--color-tertiary);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.content-section {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  section {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
