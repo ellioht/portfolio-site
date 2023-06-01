@@ -9,3 +9,15 @@ const interval = setInterval(() => {
   // Increment the index
   currentIndex = (currentIndex + 1) % characters.length;
 }, 3000); // Delay in milliseconds (1 second in this example)
+
+
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  const offset = 40; // Adjust this value as needed
+
+  const sectionPosition = section.getBoundingClientRect().top;
+  const scrollPosition = sectionPosition + window.pageYOffset - offset;
+
+  window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+}
