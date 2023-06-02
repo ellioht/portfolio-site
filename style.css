@@ -119,19 +119,14 @@ section {
     margin-bottom: 40px;
 }
 
-@media (min-width: 768px) {
-    section {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
 
 .about-section {
     margin: 180px 0 100px 0;
 }
 
 .about-container {
-    height: 200px;
+    /* height: 200px; */
+    margin: 40px 0;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -161,6 +156,13 @@ section {
     color: var(--color-accent1);
     font-weight: 1000;
     cursor: default;
+}
+
+@media (min-width: 768px) {
+  section {
+      max-width: 600px;
+      margin: 0 auto;
+  }
 }
 .arrow-div {
     height: 50px;
