@@ -247,6 +247,10 @@ section.container {
 .html {
     background-color: #e34c26;
 }
+.react {
+    background-color: #61DBFB;
+    color: var(--color-primary) !important;
+}
 .css {
     background-color: #2965f1;
 }
